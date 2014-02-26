@@ -8,6 +8,8 @@
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
 
+extern crate libc;
+
 mod bar {
     #[nolink]
     extern {}
@@ -18,8 +20,8 @@ mod zed {
     extern {}
 }
 
-mod libc {
-    use std::libc::{c_int, c_void, size_t, ssize_t};
+mod mlibc {
+    use libc::{c_int, c_void, size_t, ssize_t};
 
     #[nolink]
     extern {

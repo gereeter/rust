@@ -10,7 +10,7 @@
 
 #[deny(ctypes)];
 
-use std::libc;
+extern crate libc;
 
 #[nolink]
 extern {

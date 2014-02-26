@@ -175,6 +175,8 @@
 #[feature(macro_rules)];
 #[allow(visible_private_types)];
 
+extern crate libc;
+
 use std::mem::replace;
 use std::os;
 use std::rt::crate_map;

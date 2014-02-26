@@ -49,13 +49,14 @@
 # automatically generated for all stage/host/target combinations.
 ################################################################################
 
-TARGET_CRATES := std extra green rustuv native flate arena glob term semver \
+TARGET_CRATES := libc std extra green rustuv native flate arena glob term semver \
                  uuid serialize sync getopts collections num test time
 HOST_CRATES := syntax rustc rustdoc fourcc
 CRATES := $(TARGET_CRATES) $(HOST_CRATES)
 TOOLS := compiletest rustdoc rustc
 
-DEPS_std := native:rustrt native:compiler-rt
+DEPS_libc :=
+DEPS_std := libc native:rustrt native:compiler-rt
 DEPS_extra := std term sync serialize getopts collections time
 DEPS_green := std native:context_switch
 DEPS_rustuv := std native:uv native:uv_support
