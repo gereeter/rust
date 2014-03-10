@@ -3676,6 +3676,9 @@ pub mod funcs {
             extern {
                 pub fn opendir(dirname: *c_char) -> *DIR;
                 pub fn readdir(dirp: *DIR) -> *dirent_t;
+                pub fn readdir_r(dirp: *DIR,
+                                 entry: *mut dirent_t,
+                                 result: *mut *mut dirent_t) -> c_int;
                 pub fn closedir(dirp: *DIR) -> c_int;
                 pub fn rewinddir(dirp: *DIR);
                 pub fn seekdir(dirp: *DIR, loc: c_long);
